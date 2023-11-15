@@ -7,8 +7,8 @@ whatis([[Description: RStudio Server environment using Singularity]])
 
 local root = "/path/to/this/example_module"
 local bin = pathJoin(root, "/bin")
-local img = pathJoin(root, "/3.4.3/singularity-rstudio.simg")
-local library = pathJoin(root, "/library-3.4")
+local img = pathJoin(root, "/3.6.2/singularity-rstudio.simg")
+local library = pathJoin(root, "/library-3.6")
 local host_mnt = "/mnt"
 
 local user_library = os.getenv("HOME") .. "/R/library-3.4"
