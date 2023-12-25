@@ -1,0 +1,21 @@
+name: Continuous Integration
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container:
+      image: quay.io/singularity/singularity:v4.0.1
+      options: "--privileged --workdir /data"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build singularity image...
+        run: |
+          singularity build rstudio.sif rstudio.def
+      - name: Upload singularity image as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: singularity-image
+          path: rstudio.sif
