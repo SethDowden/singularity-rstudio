@@ -1,5 +1,5 @@
 BootStrap: library
-From: sdowden/r/singularity-r:4.3.2
+From: sdowden/r/singularity-r:4.3.2≈≈≈≈≈≈≈
 
 %labels
   Maintainer Jeremy Nicklas
@@ -38,7 +38,7 @@ From: sdowden/r/singularity-r:4.3.2
   wget \
     --no-verbose \
     -O rstudio-server.deb \
-    "https://download2.rstudio.org/server/trusty/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb"
+    "https://download2.rstudio.org/server/jammy/amd64/rstudio-server-${RSTUDIO_VERSION}-amd64.deb"
   gdebi -n rstudio-server.deb
   rm -f rstudio-server.deb
 
