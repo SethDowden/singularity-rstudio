@@ -1,5 +1,5 @@
-BootStrap: shub
-From: sdowden/singularity-r
+BootStrap: library
+From: sdowden/r/singularity-r
 
 %labels
   Maintainer Jeremy Nicklas
