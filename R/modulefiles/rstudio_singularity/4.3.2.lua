@@ -7,11 +7,11 @@ whatis([[Description: RStudio Server environment using Singularity]])
 
 local root = "/path/to/this/example_module"
 local bin = pathJoin(root, "/bin")
-local img = pathJoin(root, "/3.6.2/singularity-rstudio.simg")
-local library = pathJoin(root, "/library-3.6")
+local img = pathJoin(root, "/4.3.2/rstudio.sif")
+local library = pathJoin(root, "/library-4.3")
 local host_mnt = "/mnt"
 
-local user_library = os.getenv("HOME") .. "/R/library-3.4"
+local user_library = os.getenv("HOME") .. "/R/library-4.3"
 
 prereq("singularity")
 prepend_path("PATH", bin)

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# check if /R/3.6.2/singularity-rstudio.simg exists
-if [ -f /R/3.6.2/singularity-rstudio.simg ]; then
-    echo "singularity-rstudio.simg exists. Skipping..."
+# check if /R/4.3.2/singularity-rstudio.simg exists
+if [ -f /R/4.3.2/singularity-rstudio.simg ]; then
+    echo "rstudio.sif exists. Skipping..."
 else
-    echo "singularity-rstudio.simg does not exist. Creating..."
+    echo "rstudio.sif does not exist. Creating..."
     singularity pull --name singularity-rstudio.simg shub://nickjer/singularity-rstudio
-    mv singularity-rstudio.simg /R/3.6.2/singularity-rstudio.simg
+    mv rstudio.sif /R/4.3.2/rstudio.sif
 fi 
 
 # Confirm username is supplied
@@ -28,4 +28,4 @@ echo "Starting RStudio Server..."
 echo "Run the following command in a new terminal window to connect to RStudio Server:"
 echo "ssh -Nf -L 8787:localhost:8787 ${USERNAME}@${HOSTNAME}"
 echo "Then open a web browser and go to http://localhost:8787"
-cd R && singularity exec --bind /R/3.6.2:/srv/shiny-server /R/3.6.2/singula
+cd R && singularity exec --bind /R/4.3.2:/srv/shiny-server /R/4.3.2/singula
